@@ -1,4 +1,4 @@
-package com.aehmttw.clientmod;
+package net.theopalgames.superclient;
 
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.model.ModelElytra;

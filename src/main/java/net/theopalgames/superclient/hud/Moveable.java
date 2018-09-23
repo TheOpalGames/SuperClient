@@ -1,4 +1,4 @@
-package com.aehmttw.clientmod.hud;
+package net.theopalgames.superclient.hud;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,10 +11,9 @@ import java.util.List;
 
 import org.apache.commons.io.IOUtils;
 
-import com.aehmttw.clientmod.SuperClientEvent;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
+import net.theopalgames.superclient.SuperClientEvent;
 
 public class Moveable 
 {

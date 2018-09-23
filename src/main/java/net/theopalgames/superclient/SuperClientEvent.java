@@ -1,4 +1,4 @@
-package com.aehmttw.clientmod;
+package net.theopalgames.superclient;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -13,14 +13,13 @@ import java.util.List;
 import org.apache.commons.io.IOUtils;
 import org.lwjgl.input.Keyboard;
 
-import com.aehmttw.clientmod.hud.SuperClientEditMenu;
-
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientDisconnectionFromServerEvent;
+import net.theopalgames.superclient.hud.SuperClientEditMenu;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.entity.EntityPlayerSP;

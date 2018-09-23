@@ -1,4 +1,4 @@
-package com.aehmttw.clientmod;
+package net.theopalgames.superclient;
 
 
 import net.minecraft.client.Minecraft;

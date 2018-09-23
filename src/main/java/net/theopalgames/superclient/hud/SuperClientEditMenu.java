@@ -1,8 +1,6 @@
-package com.aehmttw.clientmod.hud;
+package net.theopalgames.superclient.hud;
 
 import java.io.IOException;
-
-import com.aehmttw.clientmod.SuperClientEvent;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
@@ -10,6 +8,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.theopalgames.superclient.SuperClientEvent;
 
 @SideOnly(Side.CLIENT)
 public class SuperClientEditMenu extends GuiScreen

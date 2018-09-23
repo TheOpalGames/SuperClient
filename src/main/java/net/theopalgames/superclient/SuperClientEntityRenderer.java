@@ -1,4 +1,4 @@
-package com.aehmttw.clientmod;
+package net.theopalgames.superclient;
 
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;

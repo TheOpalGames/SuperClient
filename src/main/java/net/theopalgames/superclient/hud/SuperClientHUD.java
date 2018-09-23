@@ -1,4 +1,4 @@
-package com.aehmttw.clientmod.hud;
+package net.theopalgames.superclient.hud;
 
 public class SuperClientHUD 
 {

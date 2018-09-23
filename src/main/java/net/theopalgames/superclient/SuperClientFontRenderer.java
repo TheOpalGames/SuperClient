@@ -1,4 +1,4 @@
-package com.aehmttw.clientmod;
+package net.theopalgames.superclient;
 
 import com.ibm.icu.text.ArabicShaping;
 import com.ibm.icu.text.ArabicShapingException;
