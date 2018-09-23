@@ -124,8 +124,8 @@ public class SuperClient
 		modMetadata.name		=	"The Super Client";
 		modMetadata.version		=	SuperClientInfo.version;
 		modMetadata.url		=	"aehmttw.wordpress.com";
-		modMetadata.authorList	=	Arrays.asList (new String[] { "aehmttw" });
-		modMetadata.credits		=	"aehmttw";
+		modMetadata.authorList	=	Arrays.asList (new String[] { "aehmttw", "Hallowizer" });
+		modMetadata.credits		=	"aehmttw for having the idea of The Super Client.";
 		modMetadata.logoFile	        =	"/mclogo.png";
 
 		new File("superclient/heads-up-display").mkdirs();
