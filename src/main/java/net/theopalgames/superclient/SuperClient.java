@@ -36,7 +36,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
 import net.minecraftforge.fml.relauncher.ReflectionHelper.UnableToAccessFieldException;
 
-@Mod(modid=SuperClientInfo.id, name="The Super Client", version=SuperClientInfo.version/*, acceptedMinecraftVersions="[1.12, 1.12.1, 1.12.2]"*/, dependencies = "required-after:forge", clientSideOnly = true, canBeDeactivated=true)
+@Mod(modid=SuperClientInfo.id, name="The Super Client", version=SuperClientInfo.version, dependencies = "required-after:forge", clientSideOnly = true, canBeDeactivated=true)
 public class SuperClient
 {
 	@Mod.Instance(value = "superclient")
