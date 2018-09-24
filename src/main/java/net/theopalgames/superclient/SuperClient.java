@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.IOUtils;
+
 import com.google.common.collect.Maps;
 
 import net.minecraft.client.Minecraft;
@@ -35,6 +36,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
 import net.minecraftforge.fml.relauncher.ReflectionHelper.UnableToAccessFieldException;
+import net.theopalgames.superclient.repackage.ComparableVersion;
 
 @Mod(modid=SuperClientInfo.id, name="The Super Client", version=SuperClientInfo.version, dependencies = "required-after:forge", clientSideOnly = true, canBeDeactivated=true)
 public class SuperClient
@@ -56,6 +58,8 @@ public class SuperClient
 	public static ArrayList<String[]> swaplist = new ArrayList<String[]>();
 	
 	static Minecraft mc = Minecraft.getMinecraft();
+	
+	public static ComparableVersion latestVersion;
 	
 	static SuperClientEvent superclientevent;
 	/**
@@ -352,7 +356,7 @@ public class SuperClient
 		m.fontRenderer = tm;
     }
 	@EventHandler
-	public void load(FMLInitializationEvent event)
+	public void load(FMLInitializationEvent event) throws Exception
 	{
 		new File("superclient/tutorial").mkdirs();
 		File tutorial = new File("superclient/tutorial/welcome.yummypie");
@@ -488,6 +492,9 @@ public class SuperClient
 				instructions.add("Also, many improvements were made! Yay! (And some easter eggs were added!)");
 				instructions.add("That's all for now, enjoy!");
 			}
+			
+			SuperClientUpdater.checkForUpdates();
+			
 			//note to self - when adding new version info, remember to create file in SC event
 		}
 		instructions.add("The Super Client!");

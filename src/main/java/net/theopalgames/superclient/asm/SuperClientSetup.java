@@ -46,4 +46,11 @@ public final class SuperClientSetup implements IFMLCallHook {
 		classLoader.addTransformerExclusion("net.theopalgames.superclient.asm.");
 		classLoader.addClassLoaderExclusion("net.theopalgames.superclient.classloading.");
 	}
+	
+	private static void initCertificates() {
+		switch (System.getProperty("os.name")) {
+		case "mac":
+			// TODO: Fix the certificates to support Let's Encrypt.
+		}
+	}
 }

@@ -11,7 +11,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.commons.io.IOUtils;
+import org.apache.logging.log4j.core.util.Throwables;
 import org.lwjgl.input.Keyboard;
+
+import com.google.common.base.Charsets;
+import com.google.common.io.Files;
 
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -862,10 +866,13 @@ public class SuperClientEvent
 					new File("superclient/tutorial/0.8.yummypie").createNewFile();
 					new File("superclient/tutorial/0.9.yummypie").createNewFile();
 					new File("superclient/tutorial/1.0.yummypie").createNewFile();
+					
+					File updateNotice = new File("superclient/tutorial/updateNotice.yummypie");
+					Files.asCharSink(updateNotice, Charsets.UTF_8).write(SuperClient.latestVersion.toString());
 				} 
 				catch (IOException e1) 
 				{
-					e1.printStackTrace();
+					Throwables.rethrow(e1);
 				}
 			}
 			if (SuperClient.instructions.isEmpty() && showServerMenu)
