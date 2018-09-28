@@ -42,7 +42,7 @@ public final class SuperClientTweaker implements ITweaker {
 		classLoader.addURL(url);
 		
 		try {
-			Method method = Class.forName("net.theopalgames.superclient.asm.SuperClientSetup").getDeclaredMethod("init", LaunchClassLoader.class);
+			Method method = Class.forName("net.theopalgames.superclient.asm.SuperClientSetup", true, classLoader).getDeclaredMethod("init", LaunchClassLoader.class);
 			method.invoke(null, classLoader);
 		} catch (NoSuchMethodException | SecurityException | ClassNotFoundException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
 			Throwables.rethrow(e);
