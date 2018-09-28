@@ -11,10 +11,11 @@ import org.apache.logging.log4j.core.util.Throwables;
 
 import net.minecraft.launchwrapper.ITweaker;
 import net.minecraft.launchwrapper.LaunchClassLoader;
+import net.minecraftforge.fml.relauncher.FMLLaunchHandler;
 
 public final class SuperClientTweaker implements ITweaker {
 	public static File jarLocation;
-	private static boolean running = true;
+	private boolean running = true;
 	
 	@Override
 	public void acceptOptions(List<String> args, File gameDir, File assetsDir, String profile) {
@@ -22,12 +23,17 @@ public final class SuperClientTweaker implements ITweaker {
 			SuperClientLog.log.error("SuperClient has detected that you are using version {}. You must be on 1.12, 1.12.1, or 1.12.2 to use SuperClient.", profile);
 			running = false;
 		}
+		
+		if (!FMLLaunchHandler.side().isClient()) {
+			SuperClientLog.log.error("SuperClient cannot be run on the server!");
+			running = false;
+		}
 	}
 	
 	@Override
 	public void injectIntoClassLoader(LaunchClassLoader classLoader) {
 		if (!running) {
-			SuperClientLog.log.error("SuperClient will not be running. Please change your Minecraft version.");
+			SuperClientLog.log.error("SuperClient will not be running. Please fix any issues listed above.");
 			return;
 		}
 		
